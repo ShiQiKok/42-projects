@@ -62,10 +62,20 @@ int	main(void)
 	printf("bzero ('This is a string yeay', 5):\n");
 	char	test3[] = "This is a string yeay";
 	char	test4[] = "This is a string yeay";
-
 	bzero(test3, 5);
-	// printf("%s\n", test3);
+	printf("%s\n", test3);
 	ft_bzero(&test4, 5);
 	printf("%s\n\n", test4);
+
+	printf("memcpy ('destination', 'copy' ,4):\n");
+	char	dest1[] = "destination";
+	char	dest2[] = "destination";
+	char	src1[] = "copy";
+	char	src2[] = "copy";
+
+	ptr = memcpy(dest1, src1, 4);
+	printf("%s\n", ptr);
+	ptr = ft_memcpy(dest2, src2, 4);
+	printf("%s\n", ptr);
 	return (0);
 }
